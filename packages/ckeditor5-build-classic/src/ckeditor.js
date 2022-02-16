@@ -6,6 +6,17 @@
 // The editor creator to use.
 import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 
+//**** added plugins ****//
+
+import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown';
+import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
+import Font from '@ckeditor/ckeditor5-font/src/font';
+import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert';
+import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
+//*****//
+
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
@@ -58,7 +69,14 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+	CodeBlock,
+	Alignment,
+	// Markdown,
+	Code,
+	Font,
+	ImageInsert,
+	RemoveFormat
 ];
 
 // Editor configuration.
@@ -66,20 +84,30 @@ ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
 			'heading',
-			'|',
+			'fontSize', 
+			'fontFamily', 
+			'fontColor', 
+			'fontBackgroundColor',
 			'bold',
 			'italic',
-			'link',
-			'bulletedList',
-			'numberedList',
 			'|',
+			'link',
+			'codeBlock',
+			'code',
+			'|',
+			'imageInsert',
+			'mediaEmbed',
+			'|',
+			'alignment',
 			'outdent',
 			'indent',
 			'|',
-			'uploadImage',
+			// 'uploadImage',
+			'bulletedList',
+			'numberedList',
 			'blockQuote',
 			'insertTable',
-			'mediaEmbed',
+			'removeFormat',
 			'undo',
 			'redo'
 		]
