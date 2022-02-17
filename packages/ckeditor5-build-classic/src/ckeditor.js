@@ -15,6 +15,8 @@ import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
 import Font from '@ckeditor/ckeditor5-font/src/font';
 import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
+import ImageResizeEditing from '@ckeditor/ckeditor5-image/src/imageresize/imageresizeediting';
+import ImageResizeHandles from '@ckeditor/ckeditor5-image/src/imageresize/imageresizehandles';
 //*****//
 
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
@@ -76,7 +78,9 @@ ClassicEditor.builtinPlugins = [
 	Code,
 	Font,
 	ImageInsert,
-	RemoveFormat
+	RemoveFormat,
+	ImageResizeEditing, 
+	ImageResizeHandles
 ];
 
 // Editor configuration.
@@ -84,8 +88,7 @@ ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
 			'heading',
-			'fontSize', 
-			'fontFamily', 
+			'fontSize',  
 			'fontColor', 
 			'fontBackgroundColor',
 			'bold',
@@ -93,7 +96,6 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'link',
 			'codeBlock',
-			'code',
 			'|',
 			'imageInsert',
 			'mediaEmbed',
