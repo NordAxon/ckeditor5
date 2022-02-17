@@ -17,6 +17,7 @@ import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 import ImageResizeEditing from '@ckeditor/ckeditor5-image/src/imageresize/imageresizeediting';
 import ImageResizeHandles from '@ckeditor/ckeditor5-image/src/imageresize/imageresizehandles';
+import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 //*****//
 
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
@@ -80,7 +81,8 @@ ClassicEditor.builtinPlugins = [
 	ImageInsert,
 	RemoveFormat,
 	ImageResizeEditing, 
-	ImageResizeHandles
+	ImageResizeHandles,
+	IndentBlock
 ];
 
 // Editor configuration.
@@ -101,7 +103,7 @@ ClassicEditor.defaultConfig = {
 			'mediaEmbed',
 			'|',
 			'alignment',
-			'outdent',
+			'outdent', 
 			'indent',
 			'|',
 			// 'uploadImage',
