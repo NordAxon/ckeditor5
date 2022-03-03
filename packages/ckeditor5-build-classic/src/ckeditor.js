@@ -87,6 +87,9 @@ ClassicEditor.builtinPlugins = [
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
+	mediaEmbed: {
+			previewsInData: true,
+	},
 	toolbar: {
 		items: [
 			'heading',
